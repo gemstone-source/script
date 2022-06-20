@@ -1,2 +1,2 @@
 # Scripts 
-This is my repo for my daily scripts it does may not help someone else but works for me.
+This is my repo for my daily scripts it may not help someone else but works for me.
