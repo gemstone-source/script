@@ -27,3 +27,16 @@ Options:
 ```
     └─$ ./shutdown.sh  -h
 ```
+3. To restart machine.
+```
+└─$ ./shutdown.sh  -r
+```
+4. To shutdown machine.
+```
+└─$ ./shutdown.sh  -s
+```
+5. To shutdown when user session inhibited.
+```
+└─$ ./shutdown.sh  -i
+```
+
