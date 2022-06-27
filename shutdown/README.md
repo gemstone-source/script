@@ -1,7 +1,8 @@
 # Shutdown linux machine.
 ### Usage
     1. For help, just run the script without any argument 
-    ```
+    
+```
     └─$ ./shutdown.sh                                          
                              
   __ _   ___  _ __ ___   ___ 
@@ -20,6 +21,6 @@ Options:
         -h 	 Show help
         -i 	 Shutdown with systemctl
         -r 	 Reboot the machine
-        -s 	 Power-Off
-    ```
+        -s 	 Power-Off                      
+```
     
