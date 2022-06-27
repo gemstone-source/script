@@ -1,2 +1,2 @@
 # Scripts 
-This is my repo for my daily scripts it may not help someone else but works for me.
+This is my repository for practicing and learnig differenr scripts some of themm might be usefull to anyone while  may not help  but works for me.
