@@ -23,4 +23,5 @@ Options:
         -r 	 Reboot the machine
         -s 	 Power-Off                      
 ```
-    
+    2. For help how to use the script.
+    `└─$ ./shutdown.sh  -h`
