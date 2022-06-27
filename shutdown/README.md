@@ -1,6 +1,6 @@
 # Shutdown linux machine.
 ### Usage
-    1. For help, just run the script without any argument 
+1. For help, just run the script without any argument 
     
 ```
     └─$ ./shutdown.sh                                          
@@ -23,7 +23,7 @@ Options:
         -r 	 Reboot the machine
         -s 	 Power-Off                      
 ```
-    2. For help how to use the script.
+2. For help how to use the script.
 ```
     └─$ ./shutdown.sh  -h
 ```
