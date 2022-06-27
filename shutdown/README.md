@@ -24,4 +24,6 @@ Options:
         -s 	 Power-Off                      
 ```
     2. For help how to use the script.
-    `└─$ ./shutdown.sh  -h`
+```
+    └─$ ./shutdown.sh  -h
+```
