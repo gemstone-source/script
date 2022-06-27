@@ -69,6 +69,7 @@ executingOptions(){
     fi
 }
 
+#Call all declared functions
 checkRunningProgramms
 killRunningProccesses
 executingOptions
