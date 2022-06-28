@@ -1,2 +1,5 @@
 #My alias
+
 alias shut='~/script/shutdown.sh'
+alias burp='sudo ~/script/burp.sh'
+
