@@ -17,7 +17,7 @@ checkRunningProgramms(){
     libreoffice_process=$(ps aux  | grep libreoffice | awk '{print $2}' | head -n 3)
 
     #Kill vmware process if vmware is installed
-    vmware_process=$(ps aux  | grep vmware | awk '{print $2}' | head -n 3) 
+    vmware_process=$(ps aux  | grep vmware | awk '{print $2}' | head -n 5) 
 }
 
 killRunningProccesses(){
