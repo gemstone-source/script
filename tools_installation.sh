@@ -38,3 +38,6 @@ sudo chmod +x Cutter-v2.1.0-Linux-x86_64.AppImage
 
 #wine installation
 sudo dpkg --add-architecture i386 && sudo apt update && sudo apt -y install wine32
+
+#install vagrant
+sudo apt install vagrant 
