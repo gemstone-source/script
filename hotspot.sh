@@ -52,9 +52,11 @@ debugError(){
     sudo systemctl start systemd-resolved
     sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
-    if [ $(sudo service resolvconf restart) = 
-        "Failed to restart resolvconf.service: Unit resolvconf.service not found") ]; then
+    sudo service resolvconf restart
+
+    if [ $? -eq 0 ]; then
         downloadResolvFile
+    fi
 
     sudo service NetworkManager restart
 }

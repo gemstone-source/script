@@ -27,7 +27,7 @@ killRunningProccesses(){
     sudo pkill firefox > /dev/null 2>&1
     sudo pkill evince > /dev/null 2>&1
     sudo pkill code >  /dev/null 2>&1
-    sudo pkill vlc >  /dev/null 2>&1
+    sudo pkill -9  vlc >  /dev/null 2>&1
     sudo kill -9 $vmware_process 2>/dev/null
     sudo kill -9 $libreoffice_process > /dev/null 2>&1
     sudo kill -9 $crond_process  > /dev/null 2>&1

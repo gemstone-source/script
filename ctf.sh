@@ -9,12 +9,15 @@ htbOpenvpn(){
 
 # openvpn for tryhackme
 thmOpenvpn(){
-	sudo openvpn ~/C7F5/htb/openvpn/hashghost.ovpn
+	sudo openvpn ~/C7F5/thm/vpn/hashghost.ovpn
 }
 
-if [ "$user_input" = "htb" ];then
+if [ "$user_input" = "htb" ] && [ "$user_input" != "" ];then
 	htbOpenvpn
 
-elif [ "$user_input" = "thm" ]; then
+elif [ "$user_input" = "thm" ] && [ "$user_input" != "" ]; then
 	thmOpenvpn
+
+else
+	printf "Hello keep hacking " && hostname
 fi

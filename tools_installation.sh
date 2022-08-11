@@ -41,3 +41,6 @@ sudo dpkg --add-architecture i386 && sudo apt update && sudo apt -y install wine
 
 #install vagrant
 sudo apt install vagrant 
+
+#This application provides display and control of Android devices connected via USB
+sudo apt install scrcpy  
