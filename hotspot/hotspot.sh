@@ -45,23 +45,3 @@ else
  echo "bye";
 fi
 
-debugError(){
-    sudo systemctl enable systemd-networkd
-    sudo systemctl enable systemd-resolved
-    sudo systemctl start systemd-networkd
-    sudo systemctl start systemd-resolved
-    sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
-
-    sudo service resolvconf restart
-
-    if [ $? -eq 0 ]; then
-        downloadResolvFile
-    fi
-
-    sudo service NetworkManager restart
-}
-
-downloadResolvFile(){
-    sudo apt-get purge resolvconf
-    sudo apt-get install resolvconf
-}

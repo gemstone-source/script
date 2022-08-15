@@ -24,6 +24,7 @@ killRunningProccesses(){
     #kill basic processes that might be open and send errors to null:
     sudo pkill obsidian >  /dev/null 2>&1
     sudo pkill nautilus > /dev/null 2>&1
+    sudo pkill sublime > /dev/null 2>&1
     sudo pkill firefox > /dev/null 2>&1
     sudo pkill evince > /dev/null 2>&1
     sudo pkill code >  /dev/null 2>&1
