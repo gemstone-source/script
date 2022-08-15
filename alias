@@ -1,5 +1,6 @@
-#My alias
+# My aliases
 
-alias shut='~/script/shutdown.sh'
+alias shut='~/script/shutdown/shutdown.sh'
 alias burp='sudo ~/script/burp.sh'
-
+alias ctf='~/script/ctf.sh'
+alias mac='sudo macchanger -m e4:54:e8:d6:6c:7a eth0'
