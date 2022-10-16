@@ -19,9 +19,7 @@ sudo systemctl start systemd-resolved
 sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 sudo service resolvconf restart
-        sudo apt-get purge resolvconf
-        sudo apt-get install resolvconf
+        sudo apt-get purge resolvconf -y
+        sudo apt-get install resolvconf -y 
 
 sudo service NetworkManager restart
-
-
