@@ -3,6 +3,7 @@
 figlet -t -k gems
 
 bold=$(tput bold)
+bold=$(tput bold)
 normal=$(tput sgr0)
 
 user_input=$1
