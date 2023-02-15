@@ -12,29 +12,29 @@ user_input=$1
 install_config(){
     echo " Am install"
     # #installations of hostapd and dnsmasq
-    # sudo apt-get install hostapd dnsmasq
+    sudo apt-get install hostapd dnsmasq
 
     # #stop and disable hostapd and dnsmasq
-    # sudo service hostapd stop
-    # sudo service dnsmasq stop
-    # sudo update-rc.d hostapd disable
-    # sudo update-rc.d dnsmasq disable
+    sudo service hostapd stop
+    sudo service dnsmasq stop
+    sudo update-rc.d hostapd disable
+    sudo update-rc.d dnsmasq disable
 
     # #Appending the interface name and specify ip range for dhcp
-    # echo "# Bind to only one interface
-    # bind-interfaces
-    # # Choose interface for binding
-    # interface=wlan0
-    # # Specify range of IP addresses for DHCP leasses
-    # dhcp-range=192.168.150.2,192.168.150.10" >> sudo  /etc/dnsmasq.conf
+    echo "# Bind to only one interface
+    bind-interfaces
+    Choose interface for binding
+    interface=wlan0
+    # Specify range of IP addresses for DHCP leasses
+    dhcp-range=192.168.150.2,192.168.150.10" >> sudo  /etc/dnsmasq.conf
 
     # #Appending driver,security mechanism and mode in hostapd confg file
-    # echo  "# Define interface
-    # interface=wlan0
-    # # Select driver
-    # driver=nl80211
-    # # Set access point name
-    # ssid=myhotspot
+     echo  "# Define interface
+    interface=wlan0
+     # Select driver
+     driver=nl80211
+     # Set access point name
+     ssid=myhotspot
     # # Set access point harware mode to 802.11g
     # hw_mode=g
     # # Set WIFI channel (can be easily changed)
