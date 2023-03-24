@@ -1,5 +1,7 @@
-#! /bin/bash
+#!/bin/bash
+# Author Gemstone Hashghost
 
+# Generating some cool banner
 figlet -t -k gems
 
 bold=$(tput bold)
@@ -7,6 +9,16 @@ normal=$(tput sgr0)
 
 user_input=$1
 #read -p "shut > "  user_input
+
+# checkAndKillRunningProgramms(){
+# Try to check processes for the specific user and shut them down
+# processes = $(ps -U $(whoami) -u | awk '{print $2}')
+# for i in $processes
+# do
+#     kill -9 $i
+# done
+# }
+
 
 
 checkRunningProgramms(){
@@ -36,25 +48,23 @@ killRunningProccesses(){
     sudo kill -9 $crond_process  > /dev/null 2>&1
 }
 
-#You have add a sleeping and shutdown after a specific period of time
-#if [ "$user_input" = "-t" ] && [ "$user_input" !="" ]; then
-	#shutdown -s 
-
 executingOptions(){
     if [ "$user_input" = "-s" ] && [ "$user_input" != "" ]; then
-            #normal shutdown 
+        
+        # Normal shutdown 
         shutdown now
 
     elif [ "$user_input" = "-i" ] && [ "$user_input" != "" ]; then
-        #If user session inhibited
+        
+        # If user session inhibited
         sudo systemctl poweroff -i
 
     elif [ "$user_input" = "-r" ] && [ "user_input" != "" ]; then
-       #normal reboot   
+       # Normal reboot   
         sudo reboot
 
     elif [ "$user_input" = "-h" ] || [ "$user_input" = "" ]; then
-        #Help menu 
+        # Help menu 
         printf "\nUsage\n" 
         printf " shut [option]\n"
         printf "${bold}\ngemstone script for shutdown machine\n"
@@ -72,7 +82,7 @@ executingOptions(){
     fi
 }
 
-#Call all declared functions
+# Calling all declared functions
 checkRunningProgramms
 killRunningProccesses
 executingOptions

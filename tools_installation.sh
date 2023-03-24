@@ -1,42 +1,45 @@
-#linux Offices
+#!/bin/bash 
+# Author Gemstone Hashghost
+
+# Linux Offices
 sudo apt install libreoffice
 
-#install metadata tool
+# Metadata tool
 sudo apt install exiftool
 
-#tool for recording screen 
+# Tool for recording screen 
 sudo apt-get -y install simplescreenrecorder
 
 # p7zip-full, provides 7z and 7za which support more compression formats.
 sudo apt install p7zip-full
 
-#install tor browser
+# Tor browser
 sudo apt install -y tor torbrowser-launcher
 
-#install neofetch for checking dev info.
+# Neofetch for checking dev info.
 sudo apt install neofetch
 
-#video player
+# Video player
 sudo apt install mpv
 
-# directoy search
+# Directoy search
 sudo apt install dirsearch 
 
-#docker installtion
+# Docker installtion
 sudo apt install docker.io
 
-#Steganoganography tool
+# Steganoganography tool
 sudo apt install steghide
 
-#chisel for docker
+# Chisel for pivoting
 sudo apt install chisel
 
-#install Cutter, tool for reverse engineering.
+# Cutter, tool for reverse engineering.
 wget https://github.com/rizinorg/cutter/releases/download/v2.1.0/Cutter-v2.1.0-Linux-x86_64.AppImage
 sudo mv Cutter-v2.1.0-Linux-x86_64.AppImage
 sudo chmod +x Cutter-v2.1.0-Linux-x86_64.AppImage
 
-#wine installation
+# Wine installation
 sudo dpkg --add-architecture i386 && sudo apt update && sudo apt -y install wine32
 
 #install vagrant
@@ -45,7 +48,7 @@ sudo apt install vagrant
 # convert pdf to image
 sudo apt install poppler-utils
 
-#This application provides display and control of Android devices connected via USB
+# This application provides display and control of Android devices connected via USB
 sudo apt install scrcpy  
 
 # Auto change wallpapers
@@ -53,3 +56,8 @@ sudo apt install variety
 
 # Neofetch
 sudo apt install neofetch -y 
+
+# Install Screen Recorder
+sudo apt update -y 
+sudo apt install ffmpeg -y
+sudo apt install obs-studio -y 
