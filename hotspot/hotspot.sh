@@ -1,4 +1,5 @@
 #!/bin/bash
+# Author Gemstone HashGhost
 
 # Edited and modified by gemstone
 figlet -t -k hotspot

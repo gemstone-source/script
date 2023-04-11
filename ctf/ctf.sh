@@ -1,4 +1,5 @@
 #!/bin/bash 
+# Author Gemstone HashGhost
 
 user_input=$1
 

@@ -1,3 +1,6 @@
+#!/bin/bash 
+# Author Gemstone HashGhost
+
 # debugError(){
     
 
