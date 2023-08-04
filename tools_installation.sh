@@ -61,3 +61,7 @@ sudo apt install neofetch -y
 sudo apt update -y 
 sudo apt install ffmpeg -y
 sudo apt install obs-studio -y 
+
+# Install Android tools for Pentesting
+sudo apt install google-android-platform-tools-installer
+
