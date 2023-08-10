@@ -8,18 +8,7 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 user_input=$1
-#read -p "shut > "  user_input
-
-# checkAndKillRunningProgramms(){
-# Try to check processes for the specific user and shut them down
-# processes = $(ps -U $(whoami) -u | awk '{print $2}')
-# for i in $processes
-# do
-#     kill -9 $i
-# done
-# }
-
-
+process_name=$2
 
 checkRunningProgramms(){
     #crond stuffs
@@ -48,22 +37,38 @@ killRunningProccesses(){
     sudo kill -9 $crond_process  > /dev/null 2>&1
 }
 
+singleKill(){
+   sudo kill $(ps aux | grep $process_name | awk '{print $2}')
+}
+
 executingOptions(){
     if [ "$user_input" = "-s" ] && [ "$user_input" != "" ]; then
         
         # Normal shutdown 
+        checkRunningProgramms
+        killRunningProccesses
         shutdown now
 
     elif [ "$user_input" = "-i" ] && [ "$user_input" != "" ]; then
         
         # If user session inhibited
+        checkRunningProgramms
+        killRunningProccesses
         sudo systemctl poweroff -i
 
     elif [ "$user_input" = "-r" ] && [ "user_input" != "" ]; then
-       # Normal reboot   
+       # Normal reboot  
+        checkRunningProgramms
+        killRunningProccesses    
         sudo reboot
 
-    elif [ "$user_input" = "-h" ] || [ "$user_input" = "" ]; then
+   elif [ "$user_input" = "-o" ] && [ "process_name" != "" ]; then
+       # Kill only single process
+       singleKill
+       reset
+       
+
+   elif [ "$user_input" = "-h" ] || [ "$user_input" = "" ]; then
         # Help menu 
         printf "\nUsage\n" 
         printf " shut [option]\n"
@@ -81,8 +86,5 @@ executingOptions(){
         neofetch
     fi
 }
-
 # Calling all declared functions
-checkRunningProgramms
-killRunningProccesses
 executingOptions
