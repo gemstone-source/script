@@ -76,6 +76,7 @@ executingOptions(){
         printf "${normal}\nOptions:\n"
         printf "
         -h \t Show help
+        -o \t Kill Single Application
         -i \t Shutdown with systemctl
         -r \t Reboot the machine
         -s \t Power-Off
