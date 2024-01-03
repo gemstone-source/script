@@ -87,5 +87,6 @@ executingOptions(){
         neofetch
     fi
 }
+
 # Calling all declared functions
 executingOptions
